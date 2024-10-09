@@ -129,3 +129,26 @@ dmypy.json
 
 # DS_Store
 *.DS_Store
+
+# Folders
+**/.vscode
+
+# file types
+*.synctex
+*.gz
+*.nlo
+*.aux
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.lof
+*.lot
+*.toc
+*.bbl
+*.blg
+*.brf
+
+# files
+settings.json
+local_memo.txt
