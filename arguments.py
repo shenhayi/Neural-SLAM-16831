@@ -17,7 +17,7 @@ def get_args():
                                 and training on gpus """)
     parser.add_argument('--num_processes_per_gpu', type=int, default=11)
     parser.add_argument('--num_processes_on_first_gpu', type=int, default=0)
-    parser.add_argument('--num_episodes', type=int, default=1000000,
+    parser.add_argument('--num_episodes', type=int, default=1000,
                         help='number of training episodes (default: 1000000)')
     parser.add_argument('--no_cuda', action='store_true', default=False,
                         help='disables CUDA training')
@@ -29,7 +29,7 @@ def get_args():
     parser.add_argument('--train_local', type=int, default=1,
                         help="""0: Do not train the Local Policy
                                 1: Train the Local Policy (default: 1)""")
-    parser.add_argument('--train_slam', type=int, default=1,
+    parser.add_argument('--train_slam', type=int, default=0,
                         help="""0: Do not train the Neural SLAM Module
                                 1: Train the Neural SLAM Module (default: 1)""")
 
@@ -136,7 +136,7 @@ def get_args():
     parser.add_argument('--local_policy_update_freq', type=int, default=5)
     parser.add_argument('--use_recurrent_local', type=int, default=1,
                         help='use a recurrent local policy')
-    parser.add_argument('--use_deterministic_local', type=int, default=0,
+    parser.add_argument('--use_deterministic_local', type=int, default=1,
                         help="use classical deterministic local policy")
 
     # Neural SLAM Module
